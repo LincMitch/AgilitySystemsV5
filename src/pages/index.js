@@ -2,8 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+// import Image from "../components/image"
 import SEO from "../components/seo"
+import Card from "../components/Card"
 
 const IndexPage = () => (
   <Layout>
@@ -30,11 +31,29 @@ const IndexPage = () => (
               M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z;
               M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z"
             />
-          </path> 
-
-\
-
+          </path>
         </svg>  
+      </div>
+    </div>
+    <div className="Cards">
+      <h2>11 courses more comming</h2>
+      <div className="CardGroup">
+          <Card 
+            title="DesignSystem"
+            text="10 sections"
+            image={require('../images/wallpaper.jpg')} />
+          <Card 
+            title="React for Designers"
+            text="11 sections"
+            image={require('../images/wallpaper2.jpg')} />
+          <Card 
+            title="Sound Design"
+            text="5 sections"
+            image={require('../images/wallpaper3.jpg')} />
+          <Card 
+            title="ARKit 2"
+            text="10 sections"
+            image={require('../images/wallpaper4.jpg')} />
       </div>
     </div>
   </Layout>
