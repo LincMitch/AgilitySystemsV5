@@ -5,6 +5,15 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+
+
+ /*
+
+ NEED HELP WITH PUTTING IN META DATA.
+ SEE https://designcode.io/react-contentful
+ THIS TUTORIAL IS A LITTLE OUT OF SINC WITH GATSBY STARTER TEMPLATE SO ITS HARD TO FOLLOW
+ */
+
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"

@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Agility Systems`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    keywords: 'react course, react for designers, ios development, sketch app, swift app course, arkit 2, after effects, create sketch plugin',
     author: `@gatsbyjs`,
   },
   plugins: [
