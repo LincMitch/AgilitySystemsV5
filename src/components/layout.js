@@ -11,15 +11,18 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import { all } from "q"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          description
-          keywords
+      allContentfulLink(sort: { fields: [createdAt], order: ASC}){
+        edges{
+          node{
+            title
+            url
+            createAt
+          }
         }
       }
     }
@@ -28,12 +31,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <main>
+          {children}
+          </main>
+        <Footer data={data}>
+          Some footer text
+        </Footer>
     </>
   )
 }
