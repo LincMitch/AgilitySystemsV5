@@ -27,7 +27,16 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            keywords
             author
+          }
+        }
+        allContentfulLink {
+          edges {
+            node {
+              title
+              url
+            } 
           }
         }
       }
@@ -35,6 +44,7 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const keywords = keywords || site.siteMetadata.keywords
 
   return (
     <Helmet
@@ -44,6 +54,10 @@ function SEO({ description, lang, meta, title }) {
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
+        {
+          name: `keywords`,
+          content: keywords,
+        },
         {
           name: `description`,
           content: metaDescription,

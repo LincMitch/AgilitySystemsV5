@@ -62,11 +62,6 @@ const Copyright = styled.div`
 
 
 const Footer = ({data, children}) => (
-    <div>
-          {data.allContentfulLink.edges.map(edge => (
-            <a href={edge.node.url}>{edge.node.title}</a>
-          ) )}
-    </div>
     <FooterGroup>
         <Text>Some text</Text>
         <Button>tweet</Button>

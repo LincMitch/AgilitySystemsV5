@@ -10,19 +10,20 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./Footer"
 import "./layout.css"
-import { all } from "q"
+// import { all } from "q"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      allContentfulLink(sort: { fields: [createdAt], order: ASC}){
-        edges{
-          node{
+    query ContentFulQuery {
+      allContentfulLink(sort: {fields: [createdAt], order: ASC }) {
+        edges {
+          node {
             title
             url
-            createAt
-          }
+            createdAt
+          } 
         }
       }
     }
@@ -30,13 +31,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
-        <main>
-          {children}
-          </main>
-        <Footer data={data}>
-          Some footer text
-        </Footer>
+      <Header/>
+      <main>
+        {children}
+      </main>
+      <Footer data={data} >
+        Footer text goes here
+      </Footer>
     </>
   )
 }

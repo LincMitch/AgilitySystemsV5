@@ -32,7 +32,6 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: 'a4sxc24ky1ll',
-        // BETTER TO PLACE THIS AS A ENV'
         accessToken: 'MdqHhvuNuYfvpbS_QVBno_D5QCUY3EVD86ySLDKjn6A'
       }
     },
