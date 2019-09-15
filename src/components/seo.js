@@ -31,14 +31,6 @@ function SEO({ description, lang, meta, title }) {
             author
           }
         }
-        allContentfulLink {
-          edges {
-            node {
-              title
-              url
-            } 
-          }
-        }
       }
     `
   )

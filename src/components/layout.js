@@ -13,6 +13,8 @@ import Header from "./header"
 import Footer from "./Footer"
 import "./layout.css"
 // import { all } from "q"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,14 +28,26 @@ const Layout = ({ children }) => {
           } 
         }
       }
+      allContentfulPage {
+        edges {
+          node {
+            richtext {
+              json
+            }
+          }
+        }
+      }
     }
   `)
+// console.log(data.allContentfulPage.edges[1].node.richtext.json)
 
   return (
     <>
       <Header/>
       <main>
         {children}
+        {documentToReactComponents(data.allContentfulPage.edges[1].node.richtext.json)}
+
       </main>
       <Footer data={data} >
         Footer text goes here
