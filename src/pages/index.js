@@ -78,28 +78,26 @@ class BlogIndex extends React.Component {
             image={require('../images/wallpaper4.jpg')} />
       </div>
     </div>
-    <Section
-      image={require('../images/wallpaper2.jpg')}
-      logo={require('../images/logo-react.png')}
-      title="React for Designers"
-      text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."         
-      />
+      <Section
+        image={require('../images/wallpaper2.jpg')}
+        logo={require('../images/logo-react.png')}
+        title="React for Designers"
+        text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."         
+        />
       <SectionCaption>12 sections - 6 hours</SectionCaption>
-      <SectionCellGroup>
-
-      {posts.map(({ node }) => {
-          const title = node.blog || node.slug
-          return (
-            <div key={node.slug}>
-                  <Link style={{ boxShadow: `none` }} to={node.slug}>
-                  <Cell title={title} />
-                  {documentToReactComponents(node.abstract.json)}
-                  </Link>
-                
-            </div>
-          )
-        })}
-      </SectionCellGroup> 
+        <SectionCellGroup>
+          {posts.map(({ node }) => {
+              const title = node.blog || node.slug
+              return (
+                <div key={node.slug}>
+                      <Link style={{ boxShadow: `none` }} to={node.slug}>
+                        <Cell title={title} />
+                        {documentToReactComponents(node.abstract.json)}
+                      </Link>
+                </div>
+              )
+            })}
+        </SectionCellGroup> 
         {/* <Bio /> */}
       </Layout>
     )

@@ -52,14 +52,14 @@ const Layout = ({ children }) => {
   }
   return (
     <>
-      <Header/>
+      {/* <Header/> */}
       <main>
         {children}
 
       </main>
-      <Footer data={data} >
+      {/* <Footer data={data} >
         Footer text goes here
-      </Footer>
+      </Footer> */}
     </>
   )
 }

@@ -9,6 +9,17 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allContentfulBlog.edges
+
+    const options = {
+      renderNode: {
+        "embedded-asset-block": node => {
+          return (
+            <img src={node.data.target.fields.file["en-US"].url} />
+          )
+        }
+      }
+    }
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
@@ -20,8 +31,8 @@ class BlogIndex extends React.Component {
                   <Link style={{ boxShadow: `none` }} to={node.slug}>
                     {title}
                   </Link>
-                {documentToReactComponents(node.abstract.json)}
-                {/* {documentToReactComponents(data.allContentfulPage.edges[1].node.richtext.json, options)} */}
+                {/* {documentToReactComponents(node.abstract.json)} */}
+                {documentToReactComponents(data.allContentfulPage.edges[1].node.richtext.json, options)}
 
             </div>
           )
