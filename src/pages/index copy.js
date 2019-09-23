@@ -1,13 +1,15 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
+// import Image from "../components/image"
 import SEO from "../components/seo"
-import Wave from '../components/Wave'
-import styled from 'styled-components'
-import Cell from '../components/Cell'
 import Card from "../components/Card"
+import Wave from '../components/Wave'
 import Section from '../components/Section'
+import staticdata from '../../staticdata.json'
+import Cell from '../components/Cell'
+import styled from 'styled-components'
+import BlogIndex from './BlogIndex'
 
 const SectionCaption = styled.p`
   font-weight: 600;
@@ -30,17 +32,10 @@ const SectionCellGroup = styled.div`
   }
 `
 
-// HOw do you make this a functional component?
-
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allContentfulBlog.edges
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-
+const IndexPage = () => (
+  <Layout>
+    <BlogIndex/>
+    {/* <SEO title="Home" />
     <div className="Hero">
       <div className="HeroGroup">
         <h1>AGILITY SYSTEMS <br/> line 2<br/> line 3</h1>
@@ -56,8 +51,8 @@ class BlogIndex extends React.Component {
         </div>
         <Wave />
       </div>
-    </div>
-    <div className="Cards">
+    </div> */}
+    {/* <div className="Cards">
       <h2>11 courses more comming</h2>
       <div className="CardGroup">
           <Card 
@@ -77,61 +72,20 @@ class BlogIndex extends React.Component {
             text="10 sections"
             image={require('../images/wallpaper4.jpg')} />
       </div>
-    </div>
-    <Section
+    </div> */}
+    {/* <Section
       image={require('../images/wallpaper2.jpg')}
       logo={require('../images/logo-react.png')}
       title="React for Designers"
       text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."         
       />
       <SectionCaption>12 sections - 6 hours</SectionCaption>
-      <SectionCellGroup>
+        <SectionCellGroup>
+          {staticdata.cells.map(cell => (
+            <Cell title={cell.title} image={cell.image} />
+          ))}
+        </SectionCellGroup>     */}
+  </Layout>
+)
 
-      {posts.map(({ node }) => {
-          const title = node.blog || node.slug
-          return (
-            <div key={node.slug}>
-                  <Link style={{ boxShadow: `none` }} to={node.slug}>
-                  <Cell title={title} />
-                  {documentToReactComponents(node.abstract.json)}
-                  </Link>
-                
-            </div>
-          )
-        })}
-      </SectionCellGroup> 
-        {/* <Bio /> */}
-      </Layout>
-    )
-  }
-}
-export default BlogIndex
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allContentfulBlog {
-      edges {
-        node {
-          blog
-          date
-          slug
-          image {
-            fluid {
-              src
-            }
-          }
-          richText {
-            json
-          }
-          abstract {
-            json
-          }
-        }
-      }
-    }
-  }
-`
+export default IndexPage

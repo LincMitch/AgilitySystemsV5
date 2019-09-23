@@ -40,13 +40,21 @@ const Layout = ({ children }) => {
     }
   `)
 // console.log(data.allContentfulPage.edges[1].node.richtext.json)
-
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        return <div className="rich">
+          <h3>this is awesome image</h3>
+          <img  src={node.data.target.fields.file['en-US'].url}/>
+        </div>
+      },
+    },
+  }
   return (
     <>
       <Header/>
       <main>
         {children}
-        {documentToReactComponents(data.allContentfulPage.edges[1].node.richtext.json)}
 
       </main>
       <Footer data={data} >
