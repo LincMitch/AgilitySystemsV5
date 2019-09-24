@@ -13,6 +13,7 @@ class BlogIndex extends React.Component {
     const options = {
       renderNode: {
         "embedded-asset-block": node => {
+          console.log('option', node);
           return (
             <img src={node.data.target.fields.file["en-US"].url} />
           )
@@ -32,7 +33,7 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 {/* {documentToReactComponents(node.abstract.json)} */}
-                {documentToReactComponents(data.allContentfulPage.edges[1].node.richtext.json, options)}
+                {documentToReactComponents(data.allContentfulBlog.edges[1].node.richtext.json, options)}
 
             </div>
           )

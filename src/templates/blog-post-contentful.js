@@ -12,7 +12,21 @@ class BlogPostContentfulTemplate extends React.Component {
     const post = this.props.data.contentfulBlog
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const options = {
+      renderNode: {
+        "embedded-asset-block": node => {
+          if (node.data.target.hasOwnProperty('fields')) {
+            return (
+              <img src={node.data.target.fields.file["en-US"].url} />
+            )
+          }
 
+          return null
+        }
+      }
+    }
+
+    
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -37,7 +51,7 @@ class BlogPostContentfulTemplate extends React.Component {
             </p>
           </header>
           <section>
-            {documentToReactComponents(post.richText.json)}
+            {documentToReactComponents(post.richText.json, options)}
           </section>
           <hr />
           <footer>
