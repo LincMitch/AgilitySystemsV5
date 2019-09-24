@@ -55,7 +55,6 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-{/* 
     <div className="Hero">
       <div className="HeroGroup">
         <h1>AGILITY SYSTEMS <br/> line 2<br/> line 3</h1>
@@ -98,8 +97,8 @@ class BlogIndex extends React.Component {
         logo={require('../images/logo-react.png')}
         title="React for Designers"
         text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."         
-        /> */}
-      {/* <SectionCaption>12 sections - 6 hours</SectionCaption> */}
+        />
+      <SectionCaption>12 sections - 6 hours</SectionCaption>
         <SectionCellGroup>
           {posts.map(({ node }) => {
               const title = node.blog || node.slug
