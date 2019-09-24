@@ -107,7 +107,7 @@ class BlogIndex extends React.Component {
                 <div key={node.slug}>
                       <Link style={{ boxShadow: `none` }} to={node.slug}>
                         <Cell title={title} />
-                        xxx1{documentToReactComponents(node.abstract.json, options)}
+                      {documentToReactComponents(node.abstract.json, options)}
                       </Link>
                 </div>
               )
