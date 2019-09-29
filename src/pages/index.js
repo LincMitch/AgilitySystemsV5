@@ -57,8 +57,8 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
     <div className="Hero">
       <div className="HeroGroup">
-        <h1>AGILITY SYSTEMS <br/> line 2<br/> line 3</h1>
-        <p>Wherever you are in your journey, we're here to help<br/> line 2<br/> line 3</p>
+        <img src={require('../images/logo.svg')} width="400"/>    
+        <p>Wherever you are in your journey, <br/> we're here to help</p>
         <Link to="/page-2/">Go to page 2</Link>
         <div className="Logos">
           <img src={require('../images/logo-sketch.png')} width="50"/>
