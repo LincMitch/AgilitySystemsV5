@@ -23,7 +23,7 @@ const Button = styled.button`
     border: none;
     padding: 16px 60px;
     font-weight: 600;
-    background: linear-gradient(102.24deg, #9B51E0 0%, #3436E7 100%);
+    background: linear-gradient(102.24deg, #00EA98 0%, #0084E9 100%);
     box-shadow: 0px 10px 20px rgba(101, 41, 255, 0.15);
     border-radius: 30px;
     justify-self: center;

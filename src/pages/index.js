@@ -100,7 +100,7 @@ class BlogIndex extends React.Component {
         title="OUR PURPOSE"
         text="To help individuals, teams and companies embrace agility and get to better business results by being more effective, improving engagement, lowing cost and enabling faster delivery. We take a holistic approach to serve and uplift your own capability so that we leave you with the skills embedded"         
         />
-      <SectionCaption>12 sections - 6 hours</SectionCaption>
+      <SectionCaption>Latest Blog Posts</SectionCaption>
         <SectionCellGroup>
           {posts.map(({ node }) => {
               const title = node.blog || node.slug
