@@ -59,44 +59,46 @@ class BlogIndex extends React.Component {
       <div className="HeroGroup">
         <img src={require('../images/logo.svg')} width="400"/>    
         <p>Wherever you are in your journey, <br/> we're here to help</p>
-        <Link to="/page-2/">Go to page 2</Link>
-        <div className="Logos">
+        <Link to="/page-2/">      
+          <img src={require('../images/arrow_downward.svg')} height='30px'/>
+        </Link>
+        {/* <div className="Logos">
           <img src={require('../images/logo-sketch.png')} width="50"/>
           <img src={require('../images/logo-figma.png')} width="50"/>
           <img src={require('../images/logo-studio.png')} width="50"/>
           <img src={require('../images/logo-framer.png')} width="50"/>
           <img src={require('../images/logo-react.png')} width="50"/>
           <img src={require('../images/logo-swift.png')} width="50"/>
-        </div>
+        </div> */}
         <Wave />
       </div>
     </div>
     <div className="Cards">
-      <h2>11 courses more comming</h2>
+      <h2>Services</h2>
       <div className="CardGroup">
           <Card 
-            title="DesignSystem"
+            title="Agile Coaching"
             text="10 sections"
-            image={require('../images/wallpaper.jpg')} />
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-07.png'} />
           <Card 
-            title="React for Designers"
+            title="Agile Training"
             text="11 sections"
-            image={require('../images/wallpaper2.jpg')} />
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-16.png'} />
           <Card 
-            title="Sound Design"
+            title="Facilitation"
             text="5 sections"
-            image={require('../images/wallpaper3.jpg')} />
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-21.png'} />
           <Card 
-            title="ARKit 2"
+            title="Agile Consulting"
             text="10 sections"
-            image={require('../images/wallpaper4.jpg')} />
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'} />
       </div>
     </div>
       <Section
         image={require('../images/wallpaper2.jpg')}
-        logo={require('../images/logo-react.png')}
-        title="React for Designers"
-        text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."         
+        logo={require('../images/noun_Compus_1896181.svg')}
+        title="OUR PURPOSE"
+        text="To help individuals, teams and companies embrace agility and get to better business results by being more effective, improving engagement, lowing cost and enabling faster delivery. We take a holistic approach to serve and uplift your own capability so that we leave you with the skills embedded"         
         />
       <SectionCaption>12 sections - 6 hours</SectionCaption>
         <SectionCellGroup>
