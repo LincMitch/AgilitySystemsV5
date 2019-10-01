@@ -21,6 +21,10 @@ a {
    position: relative;
 }
 
+.HeroSmall {
+  height: 520px;
+}
+
 .HeroGroup{
   margin:0 auto;
   max-width:500px;
