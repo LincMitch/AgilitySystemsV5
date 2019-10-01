@@ -112,7 +112,7 @@ class BlogIndex extends React.Component {
       />
 
 
-  <div className="Cards">
+  {/* <div className="Cards">
       <h2>Case Studies</h2>
       <div className="CardGroup">
           <Card 
@@ -128,14 +128,29 @@ class BlogIndex extends React.Component {
             text="intro goes here"
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'} />
       </div>
-    </div>
+    </div> */}
 
-    <Section
+    {/* <Section
       image={require('../images/wallpaper2.jpg')}
       logo={require('../images/noun_webinar_2336034 blue.svg')}
       title="TRAINING"
-      text="dsfsdfsdfsd"         
-      />
+      text="We provide ready-to-go courses. We can also customise training specifically to meet your needs. Group packages for in-house training are also possible. If you want to explore these options feel free to get in touch."               
+      /> */}
+
+      <div>
+        <h3>Training</h3>
+        <img src='../images/noun_webinar_2336034 blue.svg' />
+        <p>Below are the ready-to-go courses we currently have on offer. We can also customise training specifically to meet your needs. Group packages for in-house training are also possible. If you want to explore these options feel free to get in touch.</p>
+        <ul>
+          <li>Agile Essentials</li>
+          <li>Product Ownership</li>
+          <li>Agile Leadership</li>
+          <li>Extreme User Story Splitting</li>
+          <li>LeSS Large Scaled Scrum</li>
+          <li>SAFe 4.6</li>
+        </ul>
+        
+      </div>
 
 <div className="Cards">
       <h2>Who We Are</h2>
