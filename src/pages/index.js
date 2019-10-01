@@ -30,7 +30,7 @@ const SectionCellGroup = styled.div`
   }
 `
 
-// HOw do you make this a functional component?
+// How do you make this a functional component?
 
 class BlogIndex extends React.Component {
   render() {
@@ -74,24 +74,33 @@ class BlogIndex extends React.Component {
       </div>
     </div>
     <div className="Cards">
-      <h2>Services</h2>
+      <h2>Challenges - we can help with</h2>
       <div className="CardGroup">
           <Card 
-            title="Agile Coaching"
-            text="10 sections"
+            title="Starting Up"
+            text="Kick things off"
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-07.png'} />
           <Card 
-            title="Agile Training"
-            text="11 sections"
+            title="Uplift"
+            text="Improve what you already have"
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-16.png'} />
           <Card 
-            title="Facilitation"
-            text="5 sections"
-            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-21.png'} />
-          <Card 
-            title="Agile Consulting"
-            text="10 sections"
+            title="Transformation"
+            text="Swtich operationing model"
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'} />
+          <Card 
+            title="Learning"
+            text="Training, coaching and mentoring"
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'}
+           />
+          <Card 
+            title="Cover"
+            text="Provide expert resource"
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-07.png'} />
+          <Card 
+            title="Scale"
+            text="Scale up large pieces of work"
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-16.png'} />
       </div>
     </div>
       <Section
@@ -100,6 +109,7 @@ class BlogIndex extends React.Component {
         title="OUR PURPOSE"
         text="To help individuals, teams and companies embrace agility and get to better business results by being more effective, improving engagement, lowing cost and enabling faster delivery. We take a holistic approach to serve and uplift your own capability so that we leave you with the skills embedded"         
         />
+
       <SectionCaption>Latest Blog Posts</SectionCaption>
         <SectionCellGroup>
           {posts.map(({ node }) => {
@@ -128,7 +138,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlog {
+    allContentfulBlog(limit: 1, sort: {fields: date, order: DESC}, filter: {date: {ne: null}}) {
       edges {
         node {
           blog

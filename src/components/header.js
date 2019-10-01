@@ -32,9 +32,10 @@ class Header extends React.Component {
       <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
         <div className="HeaderGroup">
           <Link to="/"><img src={require('../images/LogoWhite.svg')} width="30" /></Link>
-          <Link to="/services">Services</Link>
+          <Link to="/services">Your Challenges</Link>
+          <Link to="/services">Our Services</Link>
           <Link to="/training">Training</Link>
-          <Link to="/about">About</Link>
+          <Link to="/about">About Us</Link>
           <Link to="/blogIndex">Blog</Link>
         </div>
       </div>
