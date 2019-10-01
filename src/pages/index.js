@@ -54,7 +54,7 @@ class BlogIndex extends React.Component {
     console.log(posts)
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="Agility Systems" />
     <div className="Hero">
       <div className="HeroGroup">
         <img src={require('../images/logo.svg')} width="400"/>    
@@ -74,7 +74,7 @@ class BlogIndex extends React.Component {
       </div>
     </div>
     <div className="Cards">
-      <h2>Challenges - we can help with</h2>
+      <h2>Focus Areas - we specialise in</h2>
       <div className="CardGroup">
           <Card 
             title="Starting Up"
@@ -86,7 +86,7 @@ class BlogIndex extends React.Component {
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-16.png'} />
           <Card 
             title="Transformation"
-            text="Swtich operationing model"
+            text="Swtich operating model"
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'} />
           <Card 
             title="Learning"
@@ -94,8 +94,8 @@ class BlogIndex extends React.Component {
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'}
            />
           <Card 
-            title="Cover"
-            text="Provide expert resource"
+            title="Quick Cover"
+            text="Provide expert resource at short notice"
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-07.png'} />
           <Card 
             title="Scale"
@@ -103,14 +103,59 @@ class BlogIndex extends React.Component {
             image={'https://rmwc.io/images/backgrounds/mb-bg-fb-16.png'} />
       </div>
     </div>
-      <Section
-        image={require('../images/wallpaper2.jpg')}
-        logo={require('../images/noun_Compus_1896181.svg')}
-        title="OUR PURPOSE"
-        text="To help individuals, teams and companies embrace agility and get to better business results by being more effective, improving engagement, lowing cost and enabling faster delivery. We take a holistic approach to serve and uplift your own capability so that we leave you with the skills embedded"         
-        />
 
-      <SectionCaption>Latest Blog Posts</SectionCaption>
+    <Section
+      image={require('../images/wallpaper2.jpg')}
+      logo={require('../images/noun_Compus_1896181.svg')}
+      title="OUR PURPOSE"
+      text="To help individuals, teams and companies embrace agility and get to better business results by being more effective, improving engagement, lowing cost and enabling faster delivery. We take a holistic approach to serve and uplift your own capability so that we leave you with the skills embedded"         
+      />
+
+
+  <div className="Cards">
+      <h2>Case Studies</h2>
+      <div className="CardGroup">
+          <Card 
+            title="Decipher"
+            text="Scaling and market fit"
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-07.png'} />
+          <Card 
+            title="RAC"
+            text="Team alignment"
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-16.png'} />
+          <Card 
+            title="Someone else"
+            text="intro goes here"
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'} />
+      </div>
+    </div>
+
+    <Section
+      image={require('../images/wallpaper2.jpg')}
+      logo={require('../images/noun_webinar_2336034 blue.svg')}
+      title="TRAINING"
+      text="dsfsdfsdfsd"         
+      />
+
+<div className="Cards">
+      <h2>About Us</h2>
+      <div className="CardGroup">
+          <Card 
+            title="Steve Barrett"
+            text="..."
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-07.png'} />
+          <Card 
+            title="Jeanne Armstrong"
+            text="..."
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-16.png'} />
+          <Card 
+            title="Will Webster"
+            text="..."
+            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'} />
+      </div>
+    </div>
+
+      <SectionCaption>Latest Blog Post</SectionCaption>
         <SectionCellGroup>
           {posts.map(({ node }) => {
               const title = node.blog || node.slug
