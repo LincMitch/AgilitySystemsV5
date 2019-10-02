@@ -112,23 +112,23 @@ class BlogIndex extends React.Component {
       />
 
 
-  {/* <div className="Cards">
+  { <div className="Cards">
       <h2>Case Studies</h2>
       <div className="CardGroup">
           <Card 
             title="Decipher"
-            text="Scaling and market fit"
-            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-07.png'} />
+            text="Agility Systems helped us with scaling and customer research. We learnt heaps and feel we are set up for success - Matt Steward, Development Manager"
+            image={require('../images/Decipher-Logo.svg')} />
           <Card 
             title="RAC"
-            text="Team alignment"
-            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-16.png'} />
+            text="The AS team run a fantastic two day alignment and agile training session for the team. Took the time to customise and make sure the content matched our needs - Charlote T, Agile Coach"
+            image={require('../images/RAC-wa-logo.png')} />
           <Card 
-            title="Someone else"
-            text="intro goes here"
-            image={'https://rmwc.io/images/backgrounds/mb-bg-fb-03.png'} />
+            title="Pfizer"
+            text="We where rolling out a lean program and AS helped us empower the teams to be part of the process. Great to see agile applied so well in a manufacturing environment - Matt"
+            image={require('../images/Pfizer_logo.svg')} />
       </div>
-    </div> */}
+    </div>}
 
     {/* <Section
       image={require('../images/wallpaper2.jpg')}
