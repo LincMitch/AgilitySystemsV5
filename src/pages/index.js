@@ -139,7 +139,7 @@ class BlogIndex extends React.Component {
 
       <div>
         <h3>Training</h3>
-        <img src='../images/noun_webinar_2336034 blue.svg' />
+        <img src={require('../images/noun_webinar_2336034 blue.svg')} />
         <p>Below are the ready-to-go courses we currently have on offer. We can also customise training specifically to meet your needs. Group packages for in-house training are also possible. If you want to explore these options feel free to get in touch.</p>
         <ul>
           <li>Agile Essentials</li>
@@ -157,21 +157,21 @@ class BlogIndex extends React.Component {
       <div className="CardGroup">
           
         <div>
-          <img src="../images/steve2.png" alt="Steve Barret" />
+          <img src={require('../images/steve2.png')} alt="Steve Barret" />
           <h3>Steve Barret<br />ICE-AC, ICP-ACC, ICP-ATF, CSP-SM, CSM, PSM I, PSPO I, CLP</h3>
           <p>Steve is an experienced Scrum Master and Agile Coach who can help organisations and teams embrace agility and create the right environment to support their journey towards high performance.<br />
             Contact Steve at steve.barrett@agilitysystems.coach</p>
         </div>
 
         <div>
-        <img src="../images/jeanne-armstrong.png" alt="Jeanne Armstrong" />
+        <img src={require('../images/jeanne-armstrong.png')} alt="Jeanne Armstrong" />
           <h3>Jeanne Armstrong<br/>Enterprise Coach</h3>
           <p>Jeanne has extensive experience as a software development and delivery manager in Silicon Valley hi-tech industries. As an early adopter of Agile and Lean she lead efforts to transform development teams and divisions to agile ways of working.<br/>
           Contact Jeanne at jeanne.armstrong@agilitysystems.coach </p>
         </div>
 
         <div>
-        <img src="../images/will-agility-systems.png" alt="Will Webster" />
+        <img src={require('../images/will-agility-systems.png')} alt="Will Webster" />
           <h3>Will Webster<br/>CSM, CLP, MCSD</h3>
           <p>Will has a technical background with a passion for building high performing teams and great products. He has effective collaboration skills and strategies for boasting productivity.<br/>
           Contact Will at will.webster@agilitysystems.coach </p>
